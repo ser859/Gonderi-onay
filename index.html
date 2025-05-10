@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gönderi Onay Paneli</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h1 { margin-bottom: 20px; }
+    .post {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+    .post img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+    }
+    .btn {
+      padding: 8px 12px;
+      margin-right: 10px;
+      cursor: pointer;
+      border: none;
+      color: white;
+      border-radius: 4px;
+    }
+    .approve { background-color: #28a745; }
+    .reject { background-color: #dc3545; }
+  </style>
+</head>
+<body>
+  <h1>Gönderi Onay Paneli</h1>
+
+  <div class="post">
+    <p><strong>Kullanıcı:</strong> kullanici_1</p>
+    <p>Yeni bir gönderi paylaştı.</p>
+    <img src="https://via.placeholder.com/400x200" alt="Gönderi">
+    <br><br>
+    <button class="btn approve" onclick="onayla(this)">Onayla</button>
+    <button class="btn reject" onclick="reddet(this)">Reddet</button>
+  </div>
+
+  <script>
+    function onayla(btn) {
+      btn.parentElement.innerHTML = "<p style='color: green;'>Gönderi onaylandı.</p>";
+    }
+
+    function reddet(btn) {
+      btn.parentElement.innerHTML = "<p style='color: red;'>Gönderi reddedildi.</p>";
+    }
+  </script>
+</body>
+</html>
